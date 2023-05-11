@@ -1,0 +1,166 @@
+@import "scss/fonts";
+@import "scss/grid.scss";
+@import "scss/tilda-main-styles";
+
+
+.work_box {
+  width: 100%;
+}
+
+.work_box_cont {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.work_box_cont_block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  transition-timing-function: linear;
+}
+
+.work_box_cont_img {
+  border: 1px solid #a8a8a8;
+  width: 19.6875rem;
+  height: 19.6875rem;
+  margin-right: 1.875rem;
+  margin-left: 1.875rem;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  object-fit: cover;
+
+  @media screen and (max-width: 1024px) {
+    width: 16.6875rem;
+    height: 16.6875rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 14.6875rem;
+    height: 14.6875rem;
+  }
+}
+
+.header-title {
+  color: #ffffff;
+  font-size: 50px;
+  font-family: 'TildaSans', Arial, sans-serif;
+  padding: 11px 0 14px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 32px;
+  }
+
+  @media screen and (max-width: 380px) {
+    font-size: 26px;
+  }
+}
+
+.code-block {
+  background-image: url('../images/code-block-bg.jpeg');
+  background-size: cover;
+  height: 300px;
+  position: relative;
+
+  @media screen and (max-width: 480px) {
+    height: 200px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: .3;
+    z-index: 0;
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    input {
+      border: none;
+      padding: 10px 20px 9px;
+      border-radius: 10px;
+      font-size: 28px;
+      line-height: 1.4;
+      font-family: "TildaSans", Arial, sans-serif;
+      text-align: center;
+
+      @media screen and (max-width: 375px) {
+        font-size: 18px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+
+  }
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-size: 24px;
+  color: #9a9a9a;
+  text-transform: uppercase;
+  opacity: 1; /* Firefox */
+
+  @media screen and (max-width: 375px) {
+    font-size: 18px;
+  }
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 24px;
+  color: #9a9a9a;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 375px) {
+    font-size: 18px;
+  }
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  font-size: 24px;
+  color: #9a9a9a;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 375px) {
+    font-size: 18px;
+  }
+}
