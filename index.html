@@ -283,8 +283,14 @@
     <div class="r t-rec">
         <div class="code-block" id="code-block">
             <div class="t-container code-block__inner">
-                <form>
-                    <input type="text" placeholder="Введите код...">
+                <form class="code-block-form">
+                    <div class="code-block-form__content-top">
+                        <input type="number" placeholder="Введите код...">
+                        <button class="code-block-form__btn-submit" type="submit">Проверить</button>
+                    </div>
+                    <small class="code-block-form__input-error">
+                        Ваше заключение ещё не готово
+                    </small>
                 </form>
             </div>
         </div>
