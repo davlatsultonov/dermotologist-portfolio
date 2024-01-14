@@ -68,12 +68,16 @@
   font-family: 'TildaSans', Arial, sans-serif;
   padding: 11px 0 14px;
 
+  &_main {
+    font-size: 34px;
+  }
+
   @media screen and (max-width: 1024px) {
     font-size: 32px;
   }
 
-  @media screen and (max-width: 380px) {
-    font-size: 26px;
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
   }
 }
 
@@ -181,6 +185,61 @@
       }
     }
 
+  }
+}
+
+#navbar {
+  margin-right: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  justify-content: center;
+
+  .t456__list_item {
+    padding: 0;
+    margin: 3px 10px;
+  }
+}
+
+.main-heading {
+  font-size: 44px;
+
+  &-container {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-right: 1px solid #f3f5f7;
+  }
+
+  @media screen and (max-width: 1200px) {
+    font-size: 34px;
+  }
+
+  @media screen and (max-width: 960px) {
+    font-size: 24px;
+
+    &-container {
+      
+      .t-heading  {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    &-container {
+      border-right: none;
+
+      .t165__textwrapper {
+        padding-right: 0;
+      }
+    }
   }
 }
 
