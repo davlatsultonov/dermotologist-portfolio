@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     if ($(window).width() > 380) {
         const navigationSectionEl = $('.navigation-sections');
-        const distance = navigationSectionEl.offset().top;
+        const distance = $(navigationSectionEl).height();
 
         placeNavigationSection(navigationSectionEl, distance);
         $(window).scroll(() => placeNavigationSection(navigationSectionEl, distance));
@@ -29,10 +29,10 @@ function placeNavigationSection (el, distance) {
         'transition': 'all 400ms ease-in-out'
     }
 
-    el.css($(window).scrollTop() > distance + 80 ? {
+    el.css($(window).scrollTop() >= distance ? {
         ...styles,
         'position': 'sticky',
-        'top': $(window).width() > 1024 ? 80 : ($(window).width() <= 380 ? 55 : 62),
+        'top': $('#main-title').height() - 3,
         'z-index': 100,
     } : {
         ...styles,
